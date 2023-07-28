@@ -1,0 +1,19 @@
+{
+  "name": "courseapi",
+  "version": "1.0.0",
+  "description": "Course Backend ApI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server NODE_ENV=production",
+    "dev": "nodemon server"
+  },
+  "author": "Eme udobong",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

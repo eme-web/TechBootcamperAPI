@@ -15,7 +15,6 @@ const reviews = require("./routes/reviews")
 
 // Load env vars
 dotenv.config()
-//dotenv.config({ path: './config/config.env'});
 
 // connect to databse
 connectDB()
@@ -33,9 +32,6 @@ app.use(morgan('dev'));
 //set security headers
 app.use(helmet());
 
-
-//Dev logging middleware
-//if(process.env.NODE_ENV === 'development') {
 
 // Mount routers
 app.use('/api/v1/bootcamps', bootcamps);

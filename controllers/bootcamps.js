@@ -83,7 +83,7 @@ exports.deleteBootcamp = asyncHandler(async(req, res, next) => {
     }
 
     bootcamp = await Bootcamp.findByIdAndDelete({_id: id})
-    res.status(200).json({success: true, data: bootcamp, msg: `Delete bootcamp",  ${req.params.id}`});
+    res.status(200).json({success: true, data: {}, msg: `Delete bootcamp",  ${req.params.id}`});
 });
 
 //@desc  Get bootcamps within a radius

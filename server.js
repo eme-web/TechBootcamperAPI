@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan'); 
 const helmet = require('helmet');
+const path = require('path');
 const errorHandler = require('./middleware/error')
 const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
@@ -31,6 +32,8 @@ app.use(morgan('dev'));
 
 //set security headers
 app.use(helmet());
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Mount routers
